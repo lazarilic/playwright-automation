@@ -5,10 +5,6 @@ export class BasePage {
     constructor(page: Page) {
       this.page = page;
     }
-  
-    // getStoreFrame() {
-    //   return this.page.frameLocator('iframe[name="framelive"]');
-    // }
 
     async getStoreFrame(): Promise<Frame> {
       const frame = await this.page.frame({ name: 'framelive' });
